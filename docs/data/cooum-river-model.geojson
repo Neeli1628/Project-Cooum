@@ -1,0 +1,1575 @@
+{
+"type": "FeatureCollection",
+"properties": {
+"title": "Project Cooum river transformation model",
+"built": "2026-11-25"
+},
+"features": [
+{
+"type": "Feature",
+"properties": {
+"layer": "river",
+"name": "Cooum River, Kesavaram anicut to the sea",
+"data": "Estimated",
+"note": "Hand-traced through geocoded towns and bridges, about 62 km here (official length about 65 km). Follows the real course only roughly; trace from OpenStreetMap before engineering use.",
+"source": "CRRT (length), Mapbox geocoding (waypoints)",
+"source_url": "https://crrt.tn.gov.in/cooum_restoration"
+},
+"geometry": {
+"type": "LineString",
+"coordinates": [
+[
+79.7618,
+13.0214
+],
+[
+79.79,
+13.03
+],
+[
+79.8139,
+13.04
+],
+[
+79.8418,
+13.056
+],
+[
+79.852,
+13.08
+],
+[
+79.8602,
+13.0968
+],
+[
+79.885,
+13.1
+],
+[
+79.91,
+13.098
+],
+[
+79.935,
+13.097
+],
+[
+79.9614,
+13.1
+],
+[
+79.99,
+13.1
+],
+[
+80.02,
+13.098
+],
+[
+80.05,
+13.097
+],
+[
+80.075,
+13.095
+],
+[
+80.098,
+13.091
+],
+[
+80.118,
+13.078
+],
+[
+80.14,
+13.072
+],
+[
+80.16,
+13.07
+],
+[
+80.185,
+13.066
+],
+[
+80.2008,
+13.0668
+],
+[
+80.212,
+13.0715
+],
+[
+80.225,
+13.0738
+],
+[
+80.236,
+13.074
+],
+[
+80.2438,
+13.0719
+],
+[
+80.252,
+13.07
+],
+[
+80.258,
+13.0695
+],
+[
+80.263,
+13.0675
+],
+[
+80.269,
+13.0684
+],
+[
+80.272,
+13.0705
+],
+[
+80.275,
+13.0724
+],
+[
+80.279,
+13.0712
+],
+[
+80.282,
+13.07
+],
+[
+80.2845,
+13.0689
+],
+[
+80.289,
+13.0665
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "restoration",
+"name": "Official restoration stretch: Paruthipattu to the mouth (32 km)",
+"data": "Sourced",
+"note": "Extent is from CRRT; the line uses the approximate trace.",
+"source": "CRRT",
+"source_url": "https://crrt.tn.gov.in/cooum_restoration"
+},
+"geometry": {
+"type": "LineString",
+"coordinates": [
+[
+80.09801,
+13.091
+],
+[
+80.118,
+13.078
+],
+[
+80.14,
+13.072
+],
+[
+80.16,
+13.07
+],
+[
+80.185,
+13.066
+],
+[
+80.2008,
+13.0668
+],
+[
+80.212,
+13.0715
+],
+[
+80.225,
+13.0738
+],
+[
+80.236,
+13.074
+],
+[
+80.2438,
+13.0719
+],
+[
+80.252,
+13.07
+],
+[
+80.258,
+13.0695
+],
+[
+80.263,
+13.0675
+],
+[
+80.269,
+13.0684
+],
+[
+80.272,
+13.0705
+],
+[
+80.275,
+13.0724
+],
+[
+80.279,
+13.0712
+],
+[
+80.282,
+13.07
+],
+[
+80.2845,
+13.0689
+],
+[
+80.289,
+13.0665
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "pilot",
+"name": "Pilot stretch 1: Napier Bridge to river mouth (0.5 km)",
+"data": "Sourced",
+"note": "End points from the DPR tender news; line drawn on the approximate trace.",
+"source": "DT Next, Oct 2026",
+"source_url": "https://www.dtnext.in/news/chennai/government-seeks-dpr-for-37-km-cooum-riverfront-development"
+},
+"geometry": {
+"type": "LineString",
+"coordinates": [
+[
+80.28445,
+13.06892
+],
+[
+80.2845,
+13.0689
+],
+[
+80.289,
+13.0665
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "pilot",
+"name": "Pilot stretch 2: Periyar Bridge to Swami Sivananda Salai (1.2 km)",
+"data": "Estimated",
+"note": "Named in the DPR tender; where Sivananda Salai meets the river is estimated (1.2 km below Periyar Bridge).",
+"source": "DT Next, Oct 2026",
+"source_url": "https://www.dtnext.in/news/chennai/government-seeks-dpr-for-37-km-cooum-riverfront-development"
+},
+"geometry": {
+"type": "LineString",
+"coordinates": [
+[
+80.27496,
+13.07238
+],
+[
+80.275,
+13.0724
+],
+[
+80.279,
+13.0712
+],
+[
+80.282,
+13.07
+],
+[
+80.2845,
+13.0689
+],
+[
+80.28526,
+13.0685
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "pilot",
+"name": "Pilot stretch 3: Link Road to Dams Road (2 km)",
+"data": "Estimated",
+"note": "Named in the DPR tender; Dams Road end placed at the Anna Salai bridge, Link Road end estimated 2 km upstream.",
+"source": "DT Next, Oct 2026",
+"source_url": "https://www.dtnext.in/news/chennai/government-seeks-dpr-for-37-km-cooum-riverfront-development"
+},
+"geometry": {
+"type": "LineString",
+"coordinates": [
+[
+80.25113,
+13.0702
+],
+[
+80.252,
+13.07
+],
+[
+80.258,
+13.0695
+],
+[
+80.263,
+13.0675
+],
+[
+80.269,
+13.0684
+],
+[
+80.26906,
+13.06844
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "landmark",
+"name": "Kesavaram anicut (source of the Cooum)",
+"data": "Sourced",
+"note": "Mapbox lists this as 'Pudu Kesavaram Dam', Arakkonam. Taken as the anicut where the Cooum leaves the Kosasthalaiyar; confirm on site.",
+"source": "Mapbox Search",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+79.7618,
+13.0214
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "landmark",
+"name": "Napier Bridge",
+"data": "Sourced",
+"note": "Bridge position from Mapbox.",
+"source": "Mapbox Search",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.28449,
+13.06889
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "landmark",
+"name": "Periyar Bridge",
+"data": "Sourced",
+"note": "Bridge position from Mapbox.",
+"source": "Mapbox Search",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.27503,
+13.07237
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "landmark",
+"name": "Anna Salai (Mount Road) bridge, Dams Road",
+"data": "Sourced",
+"note": "Bridge position from Mapbox.",
+"source": "Mapbox Search",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.26902,
+13.06838
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "landmark",
+"name": "River mouth at Marina (sand bar forms here)",
+"data": "Estimated",
+"note": "Mouth closes with sand most of the year; dredged repeatedly.",
+"source": "IIT Madras Tech Talk",
+"source_url": "https://tech-talk.iitm.ac.in/?p=1154"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.289,
+13.0665
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "koyambedu",
+"name": "Koyambedu treatment plant: 45 MLD tertiary (TTRO) water",
+"data": "Sourced",
+"note": "Less than 20 MLD of 45 MLD is used today. Releasing spare water as year-round base flow (~580 mcft a year) keeps the river moving and the mouth open. Plant pin from Mapbox.",
+"source": "World Bank; Citizen Matters",
+"source_url": "https://blogs.worldbank.org/en/endpovertyinsouthasia/chennai-becomes-first-indian-city-recycle-wastewater-scale"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.20076,
+13.0674
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "koyambedu",
+"name": "Proposed treated-water outfall to river",
+"data": "Proposal (this project)",
+"note": "Short release pipe; route not surveyed.",
+"source": "Project research 02",
+"source_url": ""
+},
+"geometry": {
+"type": "LineString",
+"coordinates": [
+[
+80.20076,
+13.0674
+],
+[
+80.2008,
+13.0668
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "checkdam",
+"name": "Pudumavilangai check dam (existing)",
+"data": "Estimated",
+"note": "2.3 m high, 100 m wide, ₹7.8 cr; irrigates Kadambathur, Satharai, Agaram. Position estimated near the named village. Proposal: add adjustable shutters (₹0.5 to 1.5 cr each, +30 to 50% storage).",
+"source": "News / WRD",
+"source_url": "https://www.dtnext.in/amp/story/news/tamilnadu/unpolluted-part-of-cooum-to-get-5th-check-dam",
+"status": "existing"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+79.876,
+13.0985
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "checkdam",
+"name": "Putlur check dam (existing)",
+"data": "Estimated",
+"note": "One of five existing dams that held at least 130 mcft after a good monsoon. Position estimated near the named village. Proposal: add adjustable shutters (₹0.5 to 1.5 cr each, +30 to 50% storage).",
+"source": "News / WRD",
+"source_url": "https://www.inkl.com/news/heavy-rainfall-fills-check-dams-across-cooum-helps-clean-polluted-stretch",
+"status": "existing"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+79.945,
+13.0975
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "checkdam",
+"name": "Paruthipattu check dam (existing)",
+"data": "Estimated",
+"note": "Upstream end of the 32 km restoration stretch. Position estimated near the named village. Proposal: add adjustable shutters (₹0.5 to 1.5 cr each, +30 to 50% storage).",
+"source": "News / WRD",
+"source_url": "https://crrt.tn.gov.in/cooum_restoration",
+"status": "existing"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.098,
+13.091
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "checkdam",
+"name": "Soranjeri check dam (sanctioned 2022, ₹5.62 cr)",
+"data": "Estimated",
+"note": "Sanctioned by WRD G.O. 12 (2022). Site position not public; placed on the river between Aranvoyal and Paruthipattu.",
+"source": "WRD G.O. 12",
+"source_url": "https://wrd.tn.gov.in/wp-content/uploads/2024/09/SPID-1321-G.O-2D-No.12-WR-S1-Dept-dated-23.02.2022-1.pdf",
+"status": "proposed"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.02,
+13.098
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "checkdam",
+"name": "New shuttered check dam (candidate)",
+"data": "Proposal (this project)",
+"note": "Candidate for 2 to 3 more shuttered dams in years 1 to 3, near farm tanks.",
+"source": "Project research 02",
+"source_url": "",
+"status": "proposed"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+79.83,
+13.048
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "checkdam",
+"name": "New shuttered check dam (candidate)",
+"data": "Proposal (this project)",
+"note": "Candidate site, as above.",
+"source": "Project research 02",
+"source_url": "",
+"status": "proposed"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+79.99,
+13.1
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "tanks",
+"name": "Upper-zone irrigation tank cluster (~80 tanks, ~9,940 ha)",
+"data": "Estimated",
+"note": "80 tanks with ~9,940 ha registered farmland in the sub-basin; 61 rural tanks irrigate ~6,630 ha in Kancheepuram, Thiruvallur and Vellore blocks. Outline is a rough zone, not individual tanks.",
+"source": "IAMWARM Cooum DPR",
+"source_url": "https://iamwarm.gov.in/IAMWARM/OLD/dpr-pdf/PhaseIV/Cooum.pdf"
+},
+"geometry": {
+"type": "Polygon",
+"coordinates": [
+[
+[
+79.74,
+13.0
+],
+[
+79.8,
+12.985
+],
+[
+79.9,
+13.03
+],
+[
+80.0,
+13.06
+],
+[
+80.06,
+13.07
+],
+[
+80.06,
+13.13
+],
+[
+79.98,
+13.145
+],
+[
+79.88,
+13.135
+],
+[
+79.8,
+13.11
+],
+[
+79.745,
+13.07
+],
+[
+79.74,
+13.0
+]
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "training",
+"name": "North training wall (proposed, 265 m)",
+"data": "Estimated",
+"note": "WRD plan with NIOT design, about ₹70 cr for both walls. Needs CRZ clearance, ~18 months. Alignment drawn schematically.",
+"source": "The Hindu via inkl",
+"source_url": "https://www.inkl.com/news/plan-to-build-training-wall-at-mouth-of-cooum-to-prevent-sand-bar"
+},
+"geometry": {
+"type": "LineString",
+"coordinates": [
+[
+80.2884,
+13.0678
+],
+[
+80.2908,
+13.068
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "training",
+"name": "South training wall (proposed, 310 m)",
+"data": "Estimated",
+"note": "As above. Get the angle and height right: earlier Cooum walls failed.",
+"source": "The Hindu via inkl",
+"source_url": "https://www.inkl.com/news/plan-to-build-training-wall-at-mouth-of-cooum-to-prevent-sand-bar"
+},
+"geometry": {
+"type": "LineString",
+"coordinates": [
+[
+80.2884,
+13.0652
+],
+[
+80.2912,
+13.0654
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "weir",
+"name": "Boating weir candidate: Chetpet",
+"data": "Proposal (this project)",
+"note": "Inflatable rubber or gated weir, 1 to 1.5 m, ₹10 to 30 cr; lies flat in floods. Build only after clean base flow exists.",
+"source": "Project research 02",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.24372,
+13.07192
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "weir",
+"name": "Boating weir candidate: Aminjikarai",
+"data": "Proposal (this project)",
+"note": "Inflatable rubber or gated weir, 1 to 1.5 m, ₹10 to 30 cr; lies flat in floods. Build only after clean base flow exists.",
+"source": "Project research 02",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.22509,
+13.0738
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "weir",
+"name": "Boating weir candidate: Koyambedu",
+"data": "Proposal (this project)",
+"note": "Inflatable rubber or gated weir, 1 to 1.5 m, ₹10 to 30 cr; lies flat in floods. Build only after clean base flow exists.",
+"source": "Project research 02",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.2009,
+13.06684
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "dock",
+"name": "Cleaning-robot dock 1",
+"data": "Proposal (this project)",
+"note": "Charging and trash-offload point for river-cleaning robots and boats; placed beside bridges and weirs for road access.",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.28744,
+13.06733
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "dock",
+"name": "Cleaning-robot dock 2",
+"data": "Proposal (this project)",
+"note": "Charging and trash-offload point for river-cleaning robots and boats; placed beside bridges and weirs for road access.",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.27602,
+13.07209
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "dock",
+"name": "Cleaning-robot dock 3",
+"data": "Proposal (this project)",
+"note": "Charging and trash-offload point for river-cleaning robots and boats; placed beside bridges and weirs for road access.",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.26996,
+13.06907
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "dock",
+"name": "Cleaning-robot dock 4",
+"data": "Proposal (this project)",
+"note": "Charging and trash-offload point for river-cleaning robots and boats; placed beside bridges and weirs for road access.",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.2448,
+13.07167
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "dock",
+"name": "Cleaning-robot dock 5",
+"data": "Proposal (this project)",
+"note": "Charging and trash-offload point for river-cleaning robots and boats; placed beside bridges and weirs for road access.",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.2262,
+13.07382
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "dock",
+"name": "Cleaning-robot dock 6",
+"data": "Proposal (this project)",
+"note": "Charging and trash-offload point for river-cleaning robots and boats; placed beside bridges and weirs for road access.",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.20191,
+13.06727
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "shop",
+"name": "Leased shop cluster: Napier Bridge entrance",
+"data": "Proposal (this project)",
+"note": "Free walk, paid shops. Model: 20 entrances × 10 shops + 15 bridges × 6 shops (~290 shops, 200 sq ft, ₹60 to 150 per sq ft a month).",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.28318,
+13.06948
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "shop",
+"name": "Leased shop cluster: Periyar Bridge",
+"data": "Proposal (this project)",
+"note": "Free walk, paid shops. Model: 20 entrances × 10 shops + 15 bridges × 6 shops (~290 shops, 200 sq ft, ₹60 to 150 per sq ft a month).",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.2738,
+13.07164
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "shop",
+"name": "Leased shop cluster: Anna Salai bridge",
+"data": "Proposal (this project)",
+"note": "Free walk, paid shops. Model: 20 entrances × 10 shops + 15 bridges × 6 shops (~290 shops, 200 sq ft, ₹60 to 150 per sq ft a month).",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.26771,
+13.06821
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "shop",
+"name": "Leased shop cluster: Pudupet small bridge",
+"data": "Proposal (this project)",
+"note": "Free walk, paid shops. Model: 20 entrances × 10 shops + 15 bridges × 6 shops (~290 shops, 200 sq ft, ₹60 to 150 per sq ft a month).",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.26164,
+13.06804
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "shop",
+"name": "Leased shop cluster: Egmore entrance",
+"data": "Proposal (this project)",
+"note": "Free walk, paid shops. Model: 20 entrances × 10 shops + 15 bridges × 6 shops (~290 shops, 200 sq ft, ₹60 to 150 per sq ft a month).",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.25068,
+13.07031
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "shop",
+"name": "Leased shop cluster: Chetpet bridge",
+"data": "Proposal (this project)",
+"note": "Free walk, paid shops. Model: 20 entrances × 10 shops + 15 bridges × 6 shops (~290 shops, 200 sq ft, ₹60 to 150 per sq ft a month).",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.24239,
+13.07228
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "shop",
+"name": "Leased shop cluster: Shenoy Nagar entrance",
+"data": "Proposal (this project)",
+"note": "Free walk, paid shops. Model: 20 entrances × 10 shops + 15 bridges × 6 shops (~290 shops, 200 sq ft, ₹60 to 150 per sq ft a month).",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.23455,
+13.07397
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "shop",
+"name": "Leased shop cluster: Aminjikarai bridge",
+"data": "Proposal (this project)",
+"note": "Free walk, paid shops. Model: 20 entrances × 10 shops + 15 bridges × 6 shops (~290 shops, 200 sq ft, ₹60 to 150 per sq ft a month).",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.22372,
+13.07357
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "shop",
+"name": "Leased shop cluster: Arumbakkam entrance",
+"data": "Proposal (this project)",
+"note": "Free walk, paid shops. Model: 20 entrances × 10 shops + 15 bridges × 6 shops (~290 shops, 200 sq ft, ₹60 to 150 per sq ft a month).",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.21065,
+13.07093
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "shop",
+"name": "Leased shop cluster: Maduravoyal entrance",
+"data": "Proposal (this project)",
+"note": "Free walk, paid shops. Model: 20 entrances × 10 shops + 15 bridges × 6 shops (~290 shops, 200 sq ft, ₹60 to 150 per sq ft a month).",
+"source": "Project research 01",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.18364,
+13.06622
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "solar",
+"name": "Bank-top solar strip (north bank)",
+"data": "Proposal (this project)",
+"note": "About 10 MWp across ~10 km of banks, ~14 GWh a year, ~₹55 cr. Panels on banks and walkway canopies, never on the channel.",
+"source": "Project research 02",
+"source_url": ""
+},
+"geometry": {
+"type": "LineString",
+"coordinates": [
+[
+80.2009,
+13.06754
+],
+[
+80.212,
+13.0722
+],
+[
+80.225,
+13.0745
+],
+[
+80.236,
+13.0747
+],
+[
+80.2438,
+13.0726
+],
+[
+80.24552,
+13.0722
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "solar",
+"name": "Bank-top solar strip (south bank)",
+"data": "Proposal (this project)",
+"note": "As above.",
+"source": "Project research 02",
+"source_url": ""
+},
+"geometry": {
+"type": "LineString",
+"coordinates": [
+[
+80.2009,
+13.06614
+],
+[
+80.212,
+13.0708
+],
+[
+80.225,
+13.0731
+],
+[
+80.236,
+13.0733
+],
+[
+80.2438,
+13.0712
+],
+[
+80.24552,
+13.0708
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "solar",
+"name": "Bank-top solar strip (north bank)",
+"data": "Proposal (this project)",
+"note": "About 10 MWp across ~10 km of banks, ~14 GWh a year, ~₹55 cr. Panels on banks and walkway canopies, never on the channel.",
+"source": "Project research 02",
+"source_url": ""
+},
+"geometry": {
+"type": "LineString",
+"coordinates": [
+[
+80.25001,
+13.07116
+],
+[
+80.252,
+13.0707
+],
+[
+80.258,
+13.0702
+],
+[
+80.263,
+13.0682
+],
+[
+80.26725,
+13.06884
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "solar",
+"name": "Bank-top solar strip (south bank)",
+"data": "Proposal (this project)",
+"note": "As above.",
+"source": "Project research 02",
+"source_url": ""
+},
+"geometry": {
+"type": "LineString",
+"coordinates": [
+[
+80.25001,
+13.06976
+],
+[
+80.252,
+13.0693
+],
+[
+80.258,
+13.0688
+],
+[
+80.263,
+13.0668
+],
+[
+80.26725,
+13.06744
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 1 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.09801,
+13.091
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 2 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.10645,
+13.08551
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 3 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.1149,
+13.08001
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 4 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.12419,
+13.07631
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 5 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.13397,
+13.07364
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 6 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.14388,
+13.07161
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 7 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.15398,
+13.0706
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 8 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.16405,
+13.06935
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 9 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.17407,
+13.06775
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 10 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.18409,
+13.06615
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 11 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.19422,
+13.06647
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 12 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.20408,
+13.06818
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 13 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.2135,
+13.07177
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 14 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.2235,
+13.07353
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 15 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.23363,
+13.07396
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 16 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.2435,
+13.07198
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 17 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.25341,
+13.06988
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 18 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.26314,
+13.06752
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 19 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.27245,
+13.07078
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"layer": "outfall",
+"name": "Sewage outfall marker 20 (illustrative)",
+"data": "Estimated",
+"note": "118 outfalls found in 2014; 41 plugged by Nov 2025. Exact positions are not public, so these markers only show spread along the 32 km stretch, about one per 1.1 km.",
+"source": "Project brief",
+"source_url": ""
+},
+"geometry": {
+"type": "Point",
+"coordinates": [
+80.28171,
+13.07012
+]
+}
+}
+]
+}

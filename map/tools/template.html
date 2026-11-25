@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cooum river model map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a field survey sheet, clear and exact, every pin tagged sourced, estimated or proposed
+   IDEA: a surveyor's river sheet with a legend panel in the margin
+   PICTURE: the full river from Kesavaram anicut to the Marina mouth, layers drawn on land and sea
+   COLOUR and TYPE: sea #bfe3ee, land #fbfbf2, contour brown, ink, route magenta; Overpass
+   LAYOUT: map full bleed on the left, legend and detail panel at right, stacked on phones */
+:root{color-scheme:light dark;--bg:light-dark(#fbfbf2,#0d1c24);--sea:light-dark(#bfe3ee,#123545);--ink:light-dark(#13242e,#e6eef0);--mute:light-dark(#566770,#9fb3bb);--rule:light-dark(#d9dccd,#24404d);--panel:light-dark(#ffffff,#112630);--mag:#d6127e;--brown:#a8551b}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Overpass,system-ui,sans-serif;overflow-x:clip}
+header{padding:18px max(3vw,16px) 12px;border-bottom:1px solid var(--rule)}
+h1{font-size:clamp(24px,3.4vw,38px);line-height:1.05;margin:0 0 6px;font-weight:800;text-wrap:balance}
+.sub{color:var(--mute);margin:0;max-width:75ch;font-size:15px}
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 340px;min-height:calc(100vh - 110px)}
+.mapbox{position:relative;background:var(--bg);min-height:520px;overflow:hidden;touch-action:none;cursor:grab}
+.mapbox svg{position:absolute;inset:0;width:100%;height:100%}
+.ctl{position:absolute;top:12px;left:12px;display:flex;gap:6px;flex-wrap:wrap;z-index:2}
+button{font:600 14px Overpass,sans-serif;min-height:40px;padding:0 12px;border-radius:6px;border:1px solid var(--rule);background:var(--panel);color:var(--ink);cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--mag);outline-offset:2px}
+button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.scale{white-space:nowrap;position:absolute;left:12px;bottom:12px;font-size:13px;background:var(--panel);padding:4px 8px;border-radius:4px;border:1px solid var(--rule)}
+aside{border-left:1px solid var(--rule);background:var(--panel);padding:16px;overflow:auto;max-height:calc(100vh - 110px)}
+aside h2{font-size:17px;margin:14px 0 6px}
+.lg{list-style:none;margin:0;padding:0}
+.lg li{display:flex;align-items:center;gap:10px;min-height:38px;border-bottom:1px solid var(--rule)}
+.lg label{display:flex;align-items:center;gap:10px;flex:1;cursor:pointer;font-size:15px}
+.lg input{width:20px;height:20px;accent-color:var(--mag)}
+.lg svg{flex:none}
+.cnt{color:var(--mute);font-size:13px}
+.key{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--mute);margin:6px 0}
+.key span{display:inline-flex;align-items:center;gap:5px}
+#info{border:1px solid var(--rule);border-radius:8px;padding:12px;margin-top:8px;font-size:15px}
+#info h3{margin:0 0 6px;font-size:16px;line-height:1.25}
+.badge{display:inline-block;font-size:13px;font-weight:600;padding:1px 8px;border-radius:10px;margin-bottom:6px}
+.b-Sourced{background:#d8efe0;color:#0b5a2a}.b-Estimated{background:#fde7c8;color:#7a3e00}.b-Proposal{background:#f9d3e7;color:#8a0a50}
+.wx{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;align-items:end;height:90px;margin-top:6px}
+.wx div{background:#2a7fb8;border-radius:3px 3px 0 0;position:relative}
+.wxl{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;font-size:13px;color:var(--mute);text-align:center}
+a{color:var(--mag)}
+.small{font-size:13px;color:var(--mute)}
+@media(max-width:860px){.wrap{grid-template-columns:1fr}aside{border-left:0;border-top:1px solid var(--rule);max-height:none}.mapbox{min-height:70vh}}
+</style></head><body>
+<header><h1>Cooum River transformation model: one map, source to sea</h1>
+<p class="sub">Every feature is tagged <b>sourced</b> (from a public record), <b>estimated</b> (real thing, position guessed) or <b>proposal</b> (this project's idea). Drag to pan, scroll or use the buttons to zoom, tap any feature for details.</p></header>
+<div class="wrap">
+<div class="mapbox" id="mb">
+<div class="ctl"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button>
+<button data-v="all" aria-pressed="true">Whole river</button><button data-v="city" aria-pressed="false">City stretch</button><button data-v="mouth" aria-pressed="false">Mouth</button></div>
+<svg id="s" role="img" aria-label="Map of the Cooum River with project layers"></svg>
+<div class="scale" id="sc"></div>
+</div>
+<aside>
+<div id="info"><h3>Tap a feature</h3><p class="small" style="margin:0">The river line is hand-traced through geocoded towns and bridges (about __LEN__ km here; official length about 65 km). Use it for planning, not engineering.</p></div>
+<h2>Layers</h2>
+<div class="key"><span><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="currentColor" stroke-width="3"/></svg>sourced</span><span><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="currentColor" stroke-width="3" stroke-dasharray="5 4"/></svg>estimated</span><span><svg width="14" height="14"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2"/></svg>estimated point</span></div>
+<ul class="lg" id="lg"></ul>
+<h2>Rain outlook, Chennai</h2>
+<div class="wx" id="wx"></div><div class="wxl" id="wxl"></div>
+<p class="small">Daily rain in mm from Xweather, fetched 25 Nov 2026, 12:31 PM IST. A snapshot: this page cannot pull live data. 28 Nov has the most rain (10.3 mm).</p>
+<h2>Open on a real basemap</h2>
+<p class="small">This page draws no street basemap. The same layers open on OpenStreetMap at <a id="gj" href="https://geojson.io">geojson.io</a>, or import <b>cooum-river-model.geojson</b> from the project files into Felt or Google My Maps.</p>
+<p class="small">Outfall markers: 118 outfalls identified in 2014, 41 plugged by Nov 2025. Exact positions are not public, so the __N__ markers only show spread.</p>
+</aside></div>
+<script>
+{
+const FC=__DATA__, COAST=__COAST__, WX=__WX__;
+const L={
+ tanks:{t:"Village tank zone (upstream)",c:"#7aa95c"},
+ river:{t:"Cooum River course",c:"#2a7fb8"},
+ restoration:{t:"Official 32 km restoration stretch",c:"#d6127e"},
+ pilot:{t:"Riverfront pilot stretches (3.7 km DPR)",c:"#13242e"},
+ solar:{t:"Bank-top solar strips",c:"#e2a900"},
+ outfall:{t:"Sewage outfalls (illustrative)",c:"#c62828"},
+ checkdam:{t:"Check dams, existing and shuttered",c:"#a8551b"},
+ training:{t:"Mouth training walls",c:"#4a4a4a"},
+ koyambedu:{t:"Koyambedu treated-water source",c:"#0f9b8e"},
+ weir:{t:"Boating weir candidates",c:"#1d4ed8"},
+ dock:{t:"Robot dock points",c:"#7a46d6"},
+ shop:{t:"Leased shop sites",c:"#e06a00"},
+ landmark:{t:"Bridges and landmarks",c:"#13242e"}};
+const on={};Object.keys(L).forEach(k=>on[k]=true);
+const k0=Math.cos(13.07*Math.PI/180);
+const P=([x,y])=>[(x-80)*k0*1000,-(y-13.07)*1000];
+const s=document.getElementById('s'),mb=document.getElementById('mb');
+const VIEWS={all:[79.74,12.975,80.31,13.165],city:[80.17,13.05,80.295,13.09],mouth:[80.272,13.060,80.296,13.078]};
+let v={cx:0,cy:0,w:1};
+function fit(b){const a=P([b[0],b[3]]),c=P([b[2],b[1]]);const W=mb.clientWidth,H=mb.clientHeight;const bw=c[0]-a[0],bh=c[1]-a[1];v.cx=(a[0]+c[0])/2;v.cy=(a[1]+c[1])/2;v.w=Math.max(bw,bh*W/H)*1.04;draw()}
+const esc=t=>String(t).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function tag(d){return d.startsWith('Proposal')?'Proposal':d}
+function draw(){
+ const W=mb.clientWidth,H=mb.clientHeight,u=v.w/W,h=H*u;
+ s.setAttribute('viewBox',`${v.cx-v.w/2} ${v.cy-h/2} ${v.w} ${h}`);
+ const cp=COAST.map(P);const a0=cp[0],a1=cp[cp.length-1];const sea=`M${a0[0]},${a0[1]-5000}L${cp.map(p=>p.join(',')).join('L')}L${a1[0]},${a1[1]+5000}L${a1[0]+5000},${a1[1]+5000}L${a0[0]+5000},${a0[1]-5000}Z`;
+ let o=`<path d="${sea}" fill="var(--sea)" stroke="#8fb9c8" stroke-width="${2*u}"/>`;
+ o+=`<text x="${P([80.305,13.10])[0]}" y="${P([80.305,13.10])[1]}" font-size="${13*u}" fill="var(--mute)" transform="rotate(-80 ${P([80.305,13.10]).join(' ')})">Bay of Bengal</text>`;
+ const order=Object.keys(L);
+ FC.features.map((f,i)=>[f,i]).sort((a,b)=>order.indexOf(a[0].properties.layer)-order.indexOf(b[0].properties.layer)).forEach(([f,i])=>{
+  const p=f.properties,ly=p.layer;if(!on[ly])return;const c=L[ly].c,g=f.geometry,est=p.data==='Estimated',prop=p.data.startsWith('Proposal');
+  const dash=est?`stroke-dasharray="${7*u} ${5*u}"`:'';
+  if(g.type==='Polygon'){const d='M'+g.coordinates[0].map(q=>P(q).join(',')).join('L')+'Z';o+=`<path data-i="${i}" d="${d}" fill="${c}" fill-opacity=".18" stroke="${c}" stroke-width="${2*u}" ${dash}/>`}
+  else if(g.type==='LineString'){const d='M'+g.coordinates.map(q=>P(q).join(',')).join('L');const w={river:4,restoration:7,pilot:10,training:6,solar:4,koyambedu:3}[ly]||3;
+   if(ly==='restoration')o+=`<path d="${d}" fill="none" stroke="${c}" stroke-opacity=".35" stroke-width="${w*u}" stroke-linecap="round"/>`;
+   o+=`<path data-i="${i}" d="${d}" fill="none" stroke="${c}" stroke-width="${(ly==='restoration'?2:w)*u}" stroke-linecap="round" stroke-linejoin="round" ${ly==='restoration'?'':dash}/>`;
+   o+=`<path data-i="${i}" d="${d}" fill="none" stroke="transparent" stroke-width="${14*u}"/>`}
+  else{const [x,y]=P(g.coordinates),r=(ly==='outfall'?4:7)*u,sw=2*u;let m;
+   if(ly==='checkdam')m=`<rect x="${x-r}" y="${y-r}" width="${2*r}" height="${2*r}" fill="${p.status==='existing'?c:'var(--bg)'}" stroke="${c}" stroke-width="${sw}"/>`;
+   else if(ly==='weir')m=`<path d="M${x},${y-r*1.3}L${x+r*1.3},${y}L${x},${y+r*1.3}L${x-r*1.3},${y}Z" fill="${c}" stroke="#fff" stroke-width="${sw/2}"/>`;
+   else if(ly==='shop')m=`<path d="M${x},${y-r*1.2}L${x+r*1.1},${y+r*.8}L${x-r*1.1},${y+r*.8}Z" fill="${c}" stroke="#fff" stroke-width="${sw/2}"/>`;
+   else m=`<circle cx="${x}" cy="${y}" r="${r}" fill="${est&&ly!=='outfall'?'var(--bg)':c}" stroke="${est&&ly!=='outfall'?c:'#fff'}" stroke-width="${sw}" ${est&&ly!=='outfall'?`stroke-dasharray="${3*u} ${2*u}"`:''}/>`;
+   o+=`<g data-i="${i}" style="cursor:pointer">${m}<circle cx="${x}" cy="${y}" r="${14*u}" fill="transparent"/></g>`;
+   const showLbl=(ly==='landmark'||ly==='koyambedu'||(ly==='checkdam'))&&v.w<(ly==='checkdam'?120:160);
+   if(showLbl){const t=p.name.split(' (')[0].split(':')[0];o+=`<text x="${x+10*u}" y="${y-8*u}" font-size="${12.5*u}" font-weight="600" fill="var(--ink)" stroke="var(--bg)" stroke-width="${3*u}" paint-order="stroke">${esc(t)}</text>`}}
+ });
+ [["Kesavaram",79.7618,13.0214],["Kadambathur",79.8617,13.0999],["Aranvoyal",79.9614,13.1045],["Thiruverkadu",80.1201,13.0734],["Koyambedu",80.195,13.075],["Chetpet",80.2438,13.0719],["Marina",80.282,13.055]].forEach(([n,x,y])=>{if(v.w>160&&['Koyambedu','Chetpet','Marina'].includes(n))return;const q=P([x,y]);o+=`<text x="${q[0]}" y="${q[1]+20*u}" font-size="${12*u}" fill="var(--mute)" text-anchor="middle">${n}</text>`});
+ s.innerHTML=o;
+ const km=v.w/W*120;const nice=[0.1,0.2,0.5,1,2,5,10,20].find(n=>n>=km*0.6)||20;document.getElementById('sc').textContent=`Bar ≈ ${nice} km`;
+ document.getElementById('sc').style.borderBottom=`3px solid var(--ink)`;document.getElementById('sc').style.width=`${nice/km*120+16}px`;
+}
+function info(i){const p=FC.features[i].properties,t=tag(p.data);
+ document.getElementById('info').innerHTML=`<span class="badge b-${t}">${esc(p.data)}</span><h3>${esc(p.name)}</h3><p style="margin:0 0 6px">${esc(p.note)}</p><p class="small" style="margin:0">Layer: ${esc(L[p.layer].t)}${p.source?` · Source: `+(p.source_url?`<a href="${esc(p.source_url)}">${esc(p.source)}</a>`:esc(p.source)):''}</p>`}
+s.addEventListener('click',e=>{const g=e.target.closest('[data-i]');if(g&&!moved)info(+g.dataset.i)});
+let drag=null,moved=false;
+mb.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;drag=[e.clientX,e.clientY,v.cx,v.cy];moved=false;mb.setPointerCapture(e.pointerId)});
+mb.addEventListener('pointermove',e=>{if(!drag)return;const u=v.w/mb.clientWidth,dx=e.clientX-drag[0],dy=e.clientY-drag[1];if(Math.abs(dx)+Math.abs(dy)>4)moved=true;v.cx=drag[2]-dx*u;v.cy=drag[3]-dy*u;draw()});
+mb.addEventListener('pointerup',()=>{drag=null});
+function zoom(f,cx,cy){const r=mb.getBoundingClientRect(),u=v.w/r.width;const px=cx??r.width/2,py=cy??r.height/2;const wx=v.cx+(px-r.width/2)*u,wy=v.cy+(py-r.height/2)*u;v.w=Math.min(800,Math.max(1.5,v.w*f));const u2=v.w/r.width;v.cx=wx-(px-r.width/2)*u2;v.cy=wy-(py-r.height/2)*u2;draw()}
+mb.addEventListener('wheel',e=>{e.preventDefault();const r=mb.getBoundingClientRect();zoom(e.deltaY>0?1.2:1/1.2,e.clientX-r.left,e.clientY-r.top)},{passive:false});
+document.getElementById('zin').onclick=()=>zoom(1/1.5);document.getElementById('zout').onclick=()=>zoom(1.5);
+document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-v]').forEach(x=>x.setAttribute('aria-pressed',x===b));fit(VIEWS[b.dataset.v])});
+const cnt={};FC.features.forEach(f=>cnt[f.properties.layer]=(cnt[f.properties.layer]||0)+1);
+document.getElementById('lg').innerHTML=Object.keys(L).reverse().map(k=>`<li><label><input type="checkbox" checked data-l="${k}"><svg width="18" height="18"><rect x="2" y="2" width="14" height="14" rx="3" fill="${L[k].c}"/></svg>${L[k].t}</label><span class="cnt">${cnt[k]||0}</span></li>`).join('');
+document.getElementById('lg').addEventListener('change',e=>{on[e.target.dataset.l]=e.target.checked;draw()});
+const mx=Math.max(...WX.map(w=>w[1]));
+document.getElementById('wx').innerHTML=WX.map(w=>`<div style="height:${Math.max(2,w[1]/mx*80)}px" title="${w[0]}: ${w[1]} mm, ${w[2]}% chance"></div>`).join('');
+document.getElementById('wxl').innerHTML=WX.map(w=>`<span>${w[0].split(' ')[0]}<br>${w[1]}</span>`).join('');
+const sty={river:{stroke:"#2a7fb8"},restoration:{stroke:"#d6127e"},pilot:{stroke:"#13242e","stroke-width":6}};
+const gfc={type:"FeatureCollection",features:FC.features.map(f=>({type:"Feature",geometry:f.geometry,properties:Object.assign({name:f.properties.name,data:f.properties.data,note:f.properties.note},f.geometry.type==='Point'?{"marker-color":L[f.properties.layer].c,"marker-size":"small"}:{stroke:L[f.properties.layer].c,"stroke-width":(sty[f.properties.layer]||{})["stroke-width"]||3,fill:L[f.properties.layer].c,"fill-opacity":0.2})}))};
+document.getElementById('gj').href='https://geojson.io/#data=data:application/json,'+encodeURIComponent(JSON.stringify(gfc));
+new ResizeObserver(()=>draw()).observe(mb);
+fit(VIEWS.all);
+}
+</script></body></html>
